@@ -1,0 +1,27 @@
+/**
+ * plugins/vuetify.ts
+ *
+ * Framework documentation: https://vuetifyjs.com`
+ */
+
+// Styles
+import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
+
+// Composables
+import { createVuetify } from 'vuetify'
+
+// https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
+
+const vuetify = (darkMode: boolean, locale = 'en') => {
+	return createVuetify({
+		theme: {
+			defaultTheme: darkMode ? 'dark' : 'light',
+		},
+		locale: {
+			locale: locale,
+		},
+	})
+}
+
+export default vuetify
