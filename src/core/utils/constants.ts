@@ -15,27 +15,27 @@ export const FilterOperator = {
 }
 
 export const apiRequestTimeOut: number = 30000
-export const localeOptions = [{ id: 'en' }, { id: 'vi' }, { id: 'ja' }, { id: 'cn' }]
-export const mapLocaleToFlag = { en: 'us', vi: 'vn', ja: 'jp', cn: 'cn' }
+export const localeOptions = [{ id: 'en' }, { id: 'vi' }, { id: 'ja' }]
+export const mapLocaleToFlag = { en: 'gb', vi: 'vn', ja: 'jp' }
 
 export const apiUrl = {
 	login: '/auth/login',
 	logout: '/auth/logout',
 	team: {
-		getTeams: '/team',
-		getTeamTree: '/team/tree-parent',
-		getAllUser: '/team/users',
-		createTeam: '/team',
-		getTeam: (id: number) => `/team/${id}`,
-		updateTeam: (id: number) => `/team/${id}`,
-		deleteTeam: (id: number) => `/team/${id}`,
+		getTeams: '/teams',
+		getTeamTree: '/teams/tree-parent',
+		getAllUser: '/teams/users',
+		createTeam: '/teams',
+		getTeam: (id: number) => `/teams/${id}`,
+		updateTeam: (id: number) => `/teams/${id}`,
+		deleteTeam: (id: number) => `/teams/${id}`,
 	},
 	permission: {
-		getPermissions: '/permission',
-		getPermission: (id: number) => `/permission/${id}`,
-		createPermission: '/permission',
-		updatePermission: (id: number) => `/permission/${id}`,
-		deletePermission: (id: number) => `/permission/${id}`,
+		getPermissions: '/permissions',
+		getPermission: (id: number) => `/permissions/${id}`,
+		createPermission: '/permissions',
+		updatePermission: (id: number) => `/permissions/${id}`,
+		deletePermission: (id: number) => `/permissions/${id}`,
 	},
 }
 

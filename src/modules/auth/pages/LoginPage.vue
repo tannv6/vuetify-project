@@ -35,7 +35,7 @@ const onSubmit = async () => {
 			router.replace('/')
 		}
 	} else {
-		showConfirm('Bạn có chắc muốn xóa user này không?')
+		console.warn('Login fail!')
 	}
 
 	loading.value = false
@@ -54,7 +54,7 @@ const showPass = ref(false)
 			:append-inner-icon="showPass ? 'mdi-eye-off' : 'mdi-eye'"
 			@click:append-inner="showPass = !showPass"
 		></v-text-field>
-		<v-btn block color="primary" @click="onSubmit" type="submit" :disabled="!valid" :loading="loading">Login</v-btn>
+		<v-btn block color="primary" type="submit" :disabled="!valid" :loading="loading">Login</v-btn>
 	</v-form>
 </template>
 <style>

@@ -9,12 +9,18 @@ const { drawer } = storeToRefs(layoutsStore)
 	<v-navigation-drawer app permanent v-model="drawer" theme="dark">
 		<v-list nav dense>
 			<v-list-item tag="router-link" to="/" prepend-icon="mdi-view-dashboard" title="Dashboard" density="compact" />
-			<v-list-group prepend-icon="mdi-account" value="true">
+			<v-list-group prepend-icon="mdi-account" value="1">
 				<template #activator="{ props }">
 					<v-list-item v-bind="props" title="Người dùng" />
 				</template>
 				<v-list-item tag="router-link" exact to="/users" title="Danh sách" prepend-icon="mdi-format-list-bulleted" />
 				<v-list-item tag="router-link" to="/users/new" title="Thêm mới" prepend-icon="mdi-plus" />
+			</v-list-group>
+			<v-list-group prepend-icon="mdi-building" value="2">
+				<template #activator="{ props }">
+					<v-list-item v-bind="props" title="Team" />
+				</template>
+				<v-list-item tag="router-link" exact to="/teams" title="Danh sách" prepend-icon="mdi-format-list-bulleted" />
 			</v-list-group>
 			<v-list-item tag="router-link" to="/settings" prepend-icon="mdi-cog" title="Cài đặt" />
 		</v-list>

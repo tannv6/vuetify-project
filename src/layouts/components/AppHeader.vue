@@ -30,7 +30,6 @@ const items = [
 	{ id: 'en', label: 'English' },
 	{ id: 'vi', label: 'Tiếng Việt' },
 	{ id: 'ja', label: '日本語' },
-	{ id: 'cn', label: '中文' },
 ]
 </script>
 <template>
